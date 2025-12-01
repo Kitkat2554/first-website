@@ -131,7 +131,23 @@
   </footer>
   <!--footer for webpage-->
 
+<button id="backToTop"> Back To Top </button> <!--back to top button: Khrystyna-->
+  <script> 
+    const backToTopBtn = document.getElementById ("backToTop"); 
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display="block";
+      }
+      else {
+        backToTopBtn.style.display="none";
+      }
+    }); //* Java Script code to allow user get back to top. It basically waits untill "scroll" event happens for more than 300px and then shows the button on the screen in the left corner, I found it this method on youtube - Khrystyna
 
+    backToTopBtn.addEventListener("click", ()=> {
+      window.scrollTo({ top:0, behavior:"smooth"
+      });
+    }); 
+  </script>
 
   </body>
   </html>
