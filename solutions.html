@@ -133,6 +133,14 @@
 
 <button id="backToTop"> Back To Top </button> <!--back to top button: Khrystyna-->
   <script> 
+
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))  
+
+  var popoverList = popoverTriggerList.map(function (popoverTriggerEl) { 
+
+  return new bootstrap.Popover(popoverTriggerEl) //* calls the bootstrap to show "popover" on the  screen 
+
+}) 
     const backToTopBtn = document.getElementById ("backToTop"); 
     window.addEventListener("scroll", () => {
       if (window.scrollY > 300) {
